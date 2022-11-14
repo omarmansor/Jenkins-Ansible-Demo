@@ -8,7 +8,7 @@
   - name: Start docker
     service: name=docker state=started
   - name: Get the dockerfile
-    git: repo=https://github.com/devops-trainer/dockerdemo.git dest=/tmp/dockerdir
+    git: repo=https://github.com/omarmansor/Jenkins-Ansible-Demo.git dest=/tmp/dockerdir
   - name: Build the dockerfile
     command: chdir=/tmp/dockerdir docker build -t deploy:ansible .
   - name: Run the docker image
